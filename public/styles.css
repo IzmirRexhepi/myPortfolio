@@ -1,0 +1,545 @@
+@import 'animate.css';
+body {
+    font-family: montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    color: #fff;
+    background: rgb(26, 26, 26);
+}
+
+.slideshow-background {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.slideshow-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+}
+
+.slideshow-image.active{
+    animation: fade 5s ease;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(38, 38, 38, 0.95);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.navigation-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 1rem;
+}
+
+.navigation-bar ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    letter-spacing: 1px;
+}
+
+.navigation-bar ul li {
+    margin-right: 2rem;
+}
+
+.navigation-bar ul li a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#li-home-section:hover, #li-about-section:hover, #li-projects-section:hover{
+    cursor: pointer;
+    color: #007bff;
+    transform: scale(1.05);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+
+    position: relative;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 9rem;
+    margin-bottom: 13rem;
+    z-index: 999;
+}
+
+h2::before{
+    content: '';
+    border-bottom: 18px solid #007bff;
+    width: 16rem;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    left: 4rem;
+    top: 5rem;
+    z-index: -1;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 0.625rem;
+
+}
+
+span{
+    color: #007bff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.viewWorkBtn {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #007bff;;
+    background-color: rgb(26, 26, 26);
+    border: 2px solid #007bff;
+    border-radius: 0.3125rem;
+    animation: fadeInBottom 2s;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.viewWorkBtn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.heading-line {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.home-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(26, 26, 26);
+    color: #fff;
+    text-align: center;
+}
+
+.home-section-container {
+    text-align: center;
+    padding: 1.25rem;
+    z-index: 1;
+}
+
+.about-section {
+    padding: 3.125rem 1.25rem; 
+
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    transition: all 1.1s;
+    /*left: -300px;*/
+    /*opacity: 0;*/
+}
+
+.profile-picture img {
+    border-radius: 15rem;
+}
+
+.profile-description {
+    font-size: 1.15rem;
+    width: 35rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills-row:not(:last-child) {
+    margin-right: 25px;
+}
+
+.skills-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    width: 160px;
+    border: double 3px transparent;
+    border-image-slice: 1;
+    border-width: 3px;
+    background-image: linear-gradient(#1a1a1a, #1a1a1a), radial-gradient(circle at top left, #51a2e9, #ff4d5a);
+    border-radius: 10px;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: transform 0.2s, opacity 1.2s;
+    overflow: hidden;
+    /*opacity: 0;*/
+}
+
+.skills-item:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.skills-item img {
+    height: 60px;
+    width: auto;
+    transition: all 0.2s;
+}
+
+.skills-item-js img {
+    border-radius: 5px;
+}
+
+.skills-item-cpp p {
+    font-size: 1.5rem;
+}
+
+.skills-item-name {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    transition: all 0.2s;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project {
+    display: flex;
+    margin-bottom: 14rem;
+    justify-content: flex-start;
+    transition: transform 0.4s ease;
+}
+
+.project:hover {
+    transform: scale(0.985);
+    display: flex;
+    margin-bottom: 14rem;
+    justify-content: flex-start;
+}
+
+.project-left {
+    align-self: flex-start;
+    margin-left: 15rem;
+    animation: fadeInLeft 2.5s;
+}
+
+.project-right {
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-right: 15rem;
+    animation: fadeInRight 4s;
+}
+
+.project-image-container {
+    height: 40rem;
+    width: 80rem;
+    background-color: #0055ff;
+    transition: all 0.2s;
+}
+
+.project-image-image {
+    width: 65%;
+}
+
+.project-image-image img {
+    width: 100%;
+}
+
+.project1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.project-info {
+    position: relative;
+    top: 8rem;
+    padding: 1rem;
+    z-index: 999;
+}
+
+.project-left div.project-info{
+    left: -8rem;
+}
+
+.project-right div.project-info{
+    left: 8rem;
+}
+.project-title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.project-description {
+    margin-top: 1rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.learn-more:hover {
+    color: #1a1a1a;
+}
+
+.learn-more:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: #ff4d5a;
+    width: 100%;
+    bottom: 1px;
+    display: block;
+    transform-origin: bottom;
+    transition: all 0.25s;
+    z-index: -1;
+}
+
+.learn-more:hover:after {
+    height: 100%;
+}
+
+.project-info a{
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 2;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-top: 3rem;
+    cursor: pointer;
+    position: relative;
+    padding: 0px 5px;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    background-color: #282828;
+}
+
+.return-home {
+    position: absolute;
+    top: -38px;
+    width: 40px;
+    height: 57px;
+    padding: 5px 13px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #007bff;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+.return-home:hover {
+    cursor: pointer;
+    animation: bounce 1.25s infinite;
+}
+
+.socials {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.socials img {
+    height: 100%;
+}
+
+.socials-github, .socials-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.socials-github:hover, .socials-email:hover {
+    transform: scale(1.2);
+}
+
+.socials-github {
+    margin-right: 0.5rem;
+}
+
+.socials-email {
+    margin-left: 0.5rem;
+}
+
+.copyright {
+    color: #fafafa;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/*<---- Animation ---->*/
+.heading-line-1 {
+    animation: fadeInLeft 2s forwards;
+}
+.heading-line-2 {
+    animation: fadeInRight 2s forwards;
+}
+
+.profile__fade-in{
+    animation: fadeInLeft 2s forwards;
+}
+
+.skills-item-fade-in{
+    animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-10rem); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(10rem); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0; /* Fully visible */
+    }
+    100% {
+        opacity: 1; /* Fully visible again */
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
