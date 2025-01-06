@@ -351,8 +351,8 @@ a {
     width: 104rem;
 }
 
-.projectNexus {
-    left: 8rem;
+div.project-right div.projectNexus {
+    left: 20rem;
 }
 
 .project-info {
