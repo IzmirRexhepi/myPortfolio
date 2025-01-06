@@ -21,8 +21,8 @@ document.getElementById('return-home').addEventListener('click', () => {
 
 const slides = [
     '/imgs/project1.png',
-    '/imgs/opengl.png',
-    '/imgs/project3.png',
+    '/imgs/project2.png',
+    '/imgs/cpp-console.png',
 ];
 
 let currentSlide = 0;
