@@ -294,19 +294,19 @@ a {
 
 .project-left {
     align-self: flex-start;
-    margin-left: 15rem;
+    margin-left: 10rem;
     animation: fadeInLeft 2.5s;
 }
 
 .project-right {
     justify-content: flex-end;
     align-self: flex-end;
-    margin-right: 15rem;
+    margin-right: 10rem;
     animation: fadeInRight 4s;
 }
 
 .project-image-container {
-    width: 80rem;
+    width: 100%;
     background-color: rgb(26, 26, 26);
     transition: all 0.2s;
 }
