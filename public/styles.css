@@ -347,18 +347,18 @@ a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 104rem;
 }
 
 div.project-right div.projectNexus {
-    left: 20rem;
+    left: 9rem;
 }
 
 .project-info {
     position: relative;
-    top: 6rem;
+    top: 8rem;
     padding: 1rem;
     z-index: 999;
+    height: 14rem;
 }
 
 .project-left div.project-info{
