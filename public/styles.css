@@ -306,14 +306,13 @@ a {
 }
 
 .project-image-container {
-    height: 40rem;
     width: 80rem;
-    background-color: #0055ff;
+    background-color: rgb(26, 26, 26);
     transition: all 0.2s;
 }
 
 .project-image-image {
-    width: 65%;
+    width: 100%;
 }
 
 .project-image-image iframe {
@@ -363,11 +362,11 @@ div.project-right div.projectNexus {
 }
 
 .project-left div.project-info{
-    left: -8rem;
+    left: -15rem;
 }
 
 .project-right div.project-info{
-    left: 8rem;
+    left: 15rem;
 }
 .project-title {
     font-size: 2.5rem;
