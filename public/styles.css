@@ -325,6 +325,10 @@ a {
     height: 30rem;
 }
 
+.petMatch img {
+    width: 90%;
+}
+
 .project1 {
     display: flex;
     align-items: center;
