@@ -598,10 +598,12 @@ div.project-right div.projectNexus {
 
     .project-left div.project-info {
         left: 0rem;
+        height: 8rem;
     }
 
     .project-right div.project-info {
         left: 0rem;
+        height: 8rem;
     }
 
     .project-right {
@@ -623,12 +625,21 @@ div.project-right div.projectNexus {
         margin-top: 0rem;
     }
 
+    .project-image-image img {
+        height: 15rem;
+    }
+
+    .petMatch img {
+        width: 100%;
+    }
+
     .project2 div.project-image-image img{
         height: 15rem;
     }
 
     .project-image-image iframe {
         height: 15rem;
+        width: 100%;
     }
 
     div.project-right div.projectNexus {
